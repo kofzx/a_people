@@ -1,6 +1,8 @@
 import { loadFbx } from "../utils/index.js";
 import * as THREE from 'three';
 
+const people = new URL('@/model/rp_nathan_animated_003_walking.fbx', import.meta.url)
+
 export class Actor {
     constructor(scene, clock) {
         this.scene = scene;
@@ -9,7 +11,7 @@ export class Actor {
         this.init();
     }
     async init() {
-        const model = await loadFbx('../../src/model/rp_nathan_animated_003_walking.fbx')
+        const model = await loadFbx(people.href)
         // 获取模型和动画数据
         const animations = model.animations;
 

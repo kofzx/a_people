@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import mapBg from '@/assets/map_bg.jpg';
 
 export class Sky {
     constructor(scene) {
@@ -11,7 +12,7 @@ export class Sky {
         const geometry = new THREE.SphereGeometry(5000, 32, 32);
         const material = new THREE.MeshBasicMaterial({
             side: THREE.DoubleSide,
-            map: loader.load('../../src/assets/map_bg.jpg')
+            map: loader.load(mapBg)
         })
 
         const sphere = new THREE.Mesh(geometry, material);

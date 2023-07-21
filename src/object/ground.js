@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import grass from '@/assets/grass.jpg'
 
 export class Ground {
     constructor(scene) {
@@ -11,7 +12,7 @@ export class Ground {
         const planeGeometry = new THREE.PlaneGeometry(size, size);
         const planeMaterial = new THREE.MeshLambertMaterial({
             color: 0xffffff,
-            map: new THREE.TextureLoader().load('../../src/assets/grass.jpg')
+            map: new THREE.TextureLoader().load(grass)
         });
         const plane = new THREE.Mesh(planeGeometry, planeMaterial);
         this.scene.add(plane);
