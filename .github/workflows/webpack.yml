@@ -27,8 +27,7 @@ jobs:
   
     - name: Delete 1.txt on push to main
       run: |
-        if [[ ${{ github.ref }} == 'refs/heads/main' ]]; then
-          rm 1.txt
+        rm 1.txt
   
     - name: Build
       run: |
